@@ -1,0 +1,71 @@
+<h2>Weather Forecast Dashboard</h2>
+<form method="POST">
+    <input type="text" name="city" placeholder="Enter City" required>
+    <button type="submit">Get Forecast</button>
+</form>
+
+{% if plot_url %}
+    <div>{{ plot_url|safe }}</div>
+{% endif %}
+
+<a href="/logout">Logout</a>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 300px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    div {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
